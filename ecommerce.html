@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerce</title>
+    <link rel="shortcut icon" href="favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="ecommerce.css">
+</head>
+
+<body>
+
+    <script src="./ecommerce.js" defer></script>
+
+    <div id="grandeDiv">
+
+        <header>
+            <nav>
+                <div class="headerNav">
+                    <img src="./logo.svg" alt="logo" class="paginaLogo">
+                    <p id="topColecoes" class="topSections">Coleções</p>
+                    <p id="topModaM" class="topSections">Moda masculina</p>
+                    <p id="topModaF" class="topSections">Moda feminina</p>
+                    <p id="topSobre" class="topSections">Sobre</p>
+                    <p id="topContato" class="topSections">Contato</p>
+                </div>
+
+                <div class="topDivMenor2">
+                    <img src="icon-cart.svg" alt="carrinho" class="carrinhoLogo" id="carrinhoLogo"> <span
+                        id="quantidadeCarrinhoAdicionada"></span>
+                    <img src="image-avatar.png" class="paginaAvatar" id="paginaAvatar">
+
+                </div>
+            </nav>
+
+        </header>
+
+        <dialog id="carrinhoAberto">
+            <div>
+                <h5 class="h5Carrinho">Carrinho</h5>
+                <p class="carrinhoVazio" id="carrinhoVazio">Seu carrinho está vazio.</p>
+                <div class="divInternaCarrinhoNone" id="divInternaCarrinho">
+                    <img src="image-product-1-thumbnail.jpg" class="thumbNailImagemCarrinho">
+                    <div>
+                        <p class="divInternaTexto">Sneakers de outono-edição limitada</p>
+                        <p class="divInternaTexto">R$220 x <span id="spanQuantidadeFinal"> </span> </p><span
+                            id="totalAPagar"></span>
+                    </div>
+                    <img src="./icon-delete.svg" class="botaoDelete" id="botaoDelete">
+                </div> <br>
+                <button class="divInternaCarrinhoNone" id="botaoFinalizar">Finalizar compra</button>
+            </div>
+        </dialog>
+
+        <main>
+
+            <div id="divComFotos">
+                <div class="imagemContainer1" id="containerImg">
+                    <p class="imagemPrincipal" onclick="imagemMaiorFunction()"> </p>
+                </div>
+
+                <div class="thumbNailsDiv">
+                    <img id="thumbnail1" src="image-product-1-thumbnail.jpg" class="thumbNailImagemSelecionada"
+                        onclick="thumbnail1Function()">
+                    <img id="thumbnail2" src="image-product-2-thumbnail.jpg" class="thumbNailImagem" onclick="thumbnail2Function()">
+                    <img id="thumbnail3" src="image-product-3-thumbnail.jpg" class="thumbNailImagem" onclick="thumbnail3Function()">
+                    <img id="thumbnail4" src="image-product-4-thumbnail.jpg" class="thumbNailImagem" onclick="thumbnail4Function()">
+                </div>
+            </div>
+
+            <div class="textosDiv">
+                <p class="topTexto">SNEAKER COMPANY</p>
+                <h2>Sneakers de outono-edição limitada</h2>
+                <p class="textoSneakerOutono">Esses sneakers low-profile são o complemento perfeito para o uso casual.
+                    Com um solado exterior de borracha, resistem a qualquer coisa que o clima ofereça.
+                </p>
+                <h2>R$220.00 <span class="spanDesconto">50%</span></h2>
+                <p class="precoAntigo">R$440.00</p>
+
+                <div class="divBotoes">
+                    <div class="divBotoesQuantidade">
+                        <button class="botaoAdiciona" id="botaoSubtrai">-</button>
+                        <p class="quantidadeSelecionada" id="quantidadeSelecionada">0</p>
+                        <button class="botaoAdiciona" id="botaoAdiciona">+</button>
+                    </div>
+                    <button class="adicionarAoCarrinho" id="adicionarAoCarrinho"><img src="icon-cart.svg">Adicionar ao carrinho</button>
+                </div>
+            </div>
+        </main>
+
+        <dialog id="imagemAmpliada" class="imagemAmpliada1">
+
+            <div>
+                <img src="icon-close.svg" id="fecharDialog">
+
+                <p id="imagemPrincipal"></p>
+
+            </div>
+
+            <div class="thumbNailsDiv">
+                <img src="image-product-1-thumbnail.jpg" class="thumbNailImagemSelecionada"
+                    onclick="thumbnailDialog1Function()" id="thumbnailDialog1">
+                <img src="image-product-2-thumbnail.jpg" class="thumbNailImagem" id="thumbnailDialog2"
+                    onclick="thumbnailDialog2Function()">
+                <img src="image-product-3-thumbnail.jpg" class="thumbNailImagem" id="thumbnailDialog3"
+                    onclick="thumbnailDialog3Function()">
+                <img src="image-product-4-thumbnail.jpg" class="thumbNailImagem" id="thumbnailDialog4"
+                    onclick="thumbnailDialog4Function()">
+            </div>
+        </dialog>
+
+    </div>
+    </div>
+
+
+
+</body>
+
+</html>
