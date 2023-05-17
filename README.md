@@ -1,0 +1,1 @@
+# ecommerce é uma página que mimetiza uma página de compras, permitindo o usuário realizar diversas ações com a mercadoria, como adicionar  e remover do carrinho, assim como ampliar a imagem para ver detalhes.
