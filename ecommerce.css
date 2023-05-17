@@ -5,8 +5,6 @@ body {
     font-family: 'Kumbh Sans', sans-serif;
 }
 
-
-
 header {
     display: flex;
     justify-content: space-between;
@@ -22,7 +20,7 @@ header {
     box-sizing: border-box;
 }
 
-nav{
+nav {
     display: flex;
     justify-content: space-between;
     width: 1400px;
@@ -59,7 +57,7 @@ nav{
     border: none;
 }
 
-.finalizarCompra{
+.finalizarCompra {
     width: 250px;
     border: none;
     border-radius: 8px;
@@ -193,7 +191,7 @@ main {
     width: 350px;
     height: 350px;
     border: none;
-    cursor:zoom-in;
+    cursor: zoom-in;
 }
 
 #imagemPrincipal {
@@ -299,79 +297,88 @@ main {
     cursor: pointer;
 }
 
+#iconeGithub {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin: .1rem;
+    margin-top: 33rem;
+}
+
 @media (min-width: 480px) and (max-width: 1024px) {
+
     #divComFotos,
-    .textosDiv{
+    .textosDiv {
         display: inline-block;
     }
 
-    main{
-       width: 600px;
-       display: block;
+    main {
+        width: 600px;
+        display: block;
     }
 
-    #containerImg{
+    #containerImg {
         width: 350px;
         height: 350px;
     }
 
-    .textosDiv{
+    .textosDiv {
         margin: 30px 0px 0px 0px;
     }
 
-    .carrinhoAberto{
+    .carrinhoAberto {
         margin-left: 450px;
     }
 
-    #divComFotos{
+    #divComFotos {
         margin-left: 100px;
     }
-    
-    #imagemPrincipal{
+
+    #imagemPrincipal {
         width: 150px;
         height: 150px;
     }
 
-    .headerNav{
+    .headerNav {
         width: 600px;
     }
 
 }
 
-@media (max-width: 480px){
+@media (max-width: 480px) {
+
     #divComFotos,
-    .textosDiv{
+    .textosDiv {
         display: inline-block;
     }
 
-    main{
-       width: 600px;
-       display: block;
+    main {
+        width: 600px;
+        display: block;
     }
 
-    #containerImg{
+    #containerImg {
         width: 350px;
         height: 350px;
     }
 
-    .textosDiv{
+    .textosDiv {
         margin: 30px 0px 0px 0px;
     }
-    
-    .carrinhoAberto{
+
+    .carrinhoAberto {
         margin-left: 250px;
     }
 
-    #divComFotos{
+    #divComFotos {
         margin-left: 100px;
     }
 
-    #imagemPrincipal{
+    #imagemPrincipal {
         width: 150px;
         height: 150px;
     }
 
-    .headerNav{
+    .headerNav {
         width: 500px;
     }
 }
