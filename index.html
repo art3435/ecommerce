@@ -17,9 +17,17 @@
     <div id="grandeDiv">
 
         <header>
+            <img src="./logo.svg" alt="logo" class="paginaLogo">
+
+            <div class="carrinhoMobileDiv">
+                <img src="icon-cart.svg" alt="carrinho" class="carrinhoLogo" id="carrinhoLogo">
+                <span id="quantidadeCarrinhoAdicionada"></span>
+
+            </div>
+            <button class="btnMenu">MENU</button>
+
             <nav>
                 <div class="headerNav">
-                    <img src="./logo.svg" alt="logo" class="paginaLogo">
                     <p id="topColecoes" class="topSections">Coleções</p>
                     <p id="topModaM" class="topSections">Moda masculina</p>
                     <p id="topModaF" class="topSections">Moda feminina</p>
@@ -28,16 +36,17 @@
                 </div>
 
                 <div class="topDivMenor2">
-                    <img src="icon-cart.svg" alt="carrinho" class="carrinhoLogo" id="carrinhoLogo"> <span
-                        id="quantidadeCarrinhoAdicionada"></span>
+                    <div id="carrinhoDesktopDiv">
+                        <img src="icon-cart.svg" alt="carrinho" class="carrinhoLogo" id="carrinhoLogo"> <span
+                            id="quantidadeCarrinhoAdicionada"></span>
+                    </div>
                     <img src="image-avatar.png" class="paginaAvatar" id="paginaAvatar">
-
                 </div>
             </nav>
 
         </header>
 
-        <dialog id="carrinhoAberto">
+        <dialog id="carrinhoAberto" class="carrinhoNone">
             <div>
                 <h5 class="h5Carrinho">Carrinho</h5>
                 <p class="carrinhoVazio" id="carrinhoVazio">Seu carrinho está vazio.</p>
@@ -55,8 +64,10 @@
         </dialog>
 
         <main>
-
+      
+              
             <div id="divComFotos">
+
                 <div class="imagemContainer1" id="containerImg">
                     <p class="imagemPrincipal" onclick="imagemMaiorFunction()"> </p>
                 </div>
@@ -64,16 +75,20 @@
                 <div class="thumbNailsDiv">
                     <img id="thumbnail1" src="image-product-1-thumbnail.jpg" class="thumbNailImagemSelecionada"
                         onclick="thumbnail1Function()">
-                    <img id="thumbnail2" src="image-product-2-thumbnail.jpg" class="thumbNailImagem" onclick="thumbnail2Function()">
-                    <img id="thumbnail3" src="image-product-3-thumbnail.jpg" class="thumbNailImagem" onclick="thumbnail3Function()">
-                    <img id="thumbnail4" src="image-product-4-thumbnail.jpg" class="thumbNailImagem" onclick="thumbnail4Function()">
+                    <img id="thumbnail2" src="image-product-2-thumbnail.jpg" class="thumbNailImagem"
+                        onclick="thumbnail2Function()">
+                    <img id="thumbnail3" src="image-product-3-thumbnail.jpg" class="thumbNailImagem"
+                        onclick="thumbnail3Function()">
+                    <img id="thumbnail4" src="image-product-4-thumbnail.jpg" class="thumbNailImagem"
+                        onclick="thumbnail4Function()">
                 </div>
             </div>
 
             <div class="textosDiv">
                 <p class="topTexto">SNEAKER COMPANY</p>
                 <h2>Sneakers de outono-edição limitada</h2>
-                <p class="textoSneakerOutono">Esses sneakers low-profile são o complemento perfeito para o uso casual.
+                <p class="textoSneakerOutono">Esses sneakers low-profile são o complemento perfeito para o uso
+                    casual.
                     Com um solado exterior de borracha, resistem a qualquer coisa que o clima ofereça.
                 </p>
                 <h2>R$220.00 <span class="spanDesconto">50%</span></h2>
@@ -85,12 +100,14 @@
                         <p class="quantidadeSelecionada" id="quantidadeSelecionada">0</p>
                         <button class="botaoAdiciona" id="botaoAdiciona">+</button>
                     </div>
-                    <button class="adicionarAoCarrinho" id="adicionarAoCarrinho"><img src="icon-cart.svg">Adicionar ao carrinho</button>
+                    <button class="adicionarAoCarrinho" id="adicionarAoCarrinho"><img src="icon-cart.svg">Adicionar
+                        ao
+                        carrinho</button>
                 </div>
             </div>
 
-            <a href="https://github.com/cartur-bs/ecommerce" target="_blank"><img src="../Portfolio/github.png" 
-                alt="Ícone do Github" id="iconeGithub"></a>
+            <a href="https://github.com/cartur-bs/ecommerce" target="_blank"><img src="../Portfolio/github.png"
+                    alt="Ícone do Github" id="iconeGithub"></a>
 
         </main>
 

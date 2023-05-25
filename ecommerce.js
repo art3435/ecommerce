@@ -23,6 +23,8 @@ const thumbnailDialog4 = document.getElementById('thumbnailDialog4');
 const setaVolta = document.getElementById('setaVolta');
 const setaPassa = document.getElementById('setaPassa');
 const topDiv = document.getElementById('topDiv');
+const main = document.querySelector('main');
+const proximaImg = document.getElementById('proximaImg');
 
 paginaAvatar.addEventListener('mouseover', () => {
     paginaAvatar.style.border = '2px solid orange'
@@ -88,8 +90,6 @@ function thumbnail3Function() {
 
     containerImg.classList.remove('imagemContainer1');
     containerImg.classList.add('imagemContainer3');
-
-
 
     imagemAmpliada.classList.add('imagemAmpliada3');
 
@@ -187,6 +187,8 @@ adicionarAoCarrinho.addEventListener('click', () => {
 carrinhoLogo.addEventListener('click', () => {
     const carrinhoAberto = document.querySelector('#carrinhoAberto');
     carrinhoAberto.classList.toggle('carrinhoAberto')
+
+    main.classList.toggle('mainCarrinhoAberto')
 })
 
 botaoDelete.addEventListener('click', () => {
@@ -225,6 +227,7 @@ function thumbnailDialog1Function() {
     thumbnailDialog4.classList.add('thumbNailImagem');
 
 }
+
 
 function thumbnailDialog2Function() {
     imagemAmpliada.style.backgroundImage = ("URL('image-product-2.jpg')");
@@ -269,3 +272,12 @@ function thumbnailDialog4Function() {
     thumbnailDialog2.classList.remove('thumbNailImagemSelecionada');
     thumbnailDialog2.classList.add('thumbNailImagem');
 }
+
+var mudaMobileImg = 0
+
+proximaImg.addEventListener('click', () => {
+    if (mudaMobileImg === 0) {
+        thumbnail2Function();
+        mudaMobileImg = 1
+    }
+})

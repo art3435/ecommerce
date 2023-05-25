@@ -8,6 +8,7 @@ body {
 header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding-bottom: 10px;
     border-bottom: 1px solid hsl(229, 24%, 87%);
 }
@@ -16,14 +17,18 @@ header {
     display: inline-flex;
     justify-content: space-between;
     align-items: center;
-    width: 800px;
-    box-sizing: border-box;
+    width: 600px;
+    margin-left: 20px;
 }
 
 nav {
     display: flex;
     justify-content: space-between;
     width: 1400px;
+}
+
+.btnMenu {
+    display: none;
 }
 
 .topSections {
@@ -49,12 +54,22 @@ nav {
     cursor: pointer;
 }
 
+.carrinhoNone {
+    display: none;
+}
+
 .carrinhoAberto {
-    display: inline;
+    display: inline-block;
     z-index: 1;
-    margin-left: 1050px;
-    width: 290px;
+    height: 86%;
+    margin-right: 78%;
+    width: 300px;
     border: none;
+    border-radius: 18px;
+}
+
+.mainCarrinhoAberto {
+    opacity: 0.6;
 }
 
 .finalizarCompra {
@@ -70,6 +85,11 @@ nav {
 
 .divInternaCarrinhoNone {
     display: none;
+}
+
+#carrinhoDiv {
+    display: flex;
+    height: 5px;
 }
 
 .divInternaCarrinho {
@@ -96,14 +116,19 @@ nav {
 }
 
 #quantidadeCarrinhoAdicionada {
-    margin-left: -30px;
-    margin-bottom: 12px;
+    margin-left: 12px;
     z-index: 1;
     background-color: hsl(26, 100%, 55%);
-    border-radius: 40%;
+    height: 18px;
+    width: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
     font-size: 12px;
     box-sizing: border-box;
-    padding: 2px;
+    padding: 4px;
+    position: absolute;
 }
 
 .topDivMenor2 {
@@ -111,6 +136,21 @@ nav {
     display: inline-flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.carrinhoMobileDiv {
+    display: none;
+}
+
+#carrinhoDesktopDiv {
+    display: flex;
+    justify-content: space-between;
+}
+
+.paginaLogo {
+    width: 150px;
+    height: 30px;
+    margin-right: 10px;
 }
 
 .paginaAvatar {
@@ -290,6 +330,7 @@ main {
     cursor: pointer;
 }
 
+
 #fecharDialog {
     margin-left: 420px;
     height: 25px;
@@ -298,13 +339,18 @@ main {
 }
 
 #iconeGithub {
+    display: inline-block;
     width: 2.5rem;
     height: 2.5rem;
     margin: .1rem;
     margin-top: 33rem;
 }
 
-@media (min-width: 480px) and (max-width: 1024px) {
+.setasImagens img{
+    display: none;
+}
+
+@media (max-width: 1024px) {
 
     #divComFotos,
     .textosDiv {
@@ -326,11 +372,12 @@ main {
     }
 
     .carrinhoAberto {
-        margin-left: 450px;
+        margin-left: 250px;
+        display: inline;
     }
 
     #divComFotos {
-        margin-left: 100px;
+        margin-left: 50px;
     }
 
     #imagemPrincipal {
@@ -339,10 +386,92 @@ main {
     }
 
     .headerNav {
-        width: 600px;
+        width: 300px;
     }
 
+    nav {
+        display: none;
+    }
+
+    .btnMenu {
+        display: inline-block;
+        padding-right: 5px;
+        background-color: #fff;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+    }
+
+    .paginaLogo {
+        margin: 0;
+    }
+
+    .btnMenu:focus-within~nav {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: start;
+        align-items: baseline;
+        position: absolute;
+        top: 7%;
+        right: 0;
+        padding-top: 100px;
+        z-index: 1;
+        background-color: #e6dfec;
+        width: 100%;
+        height: 300%;
+        border-radius: 18px;
+        font-weight: bold;
+    }
+
+    .headerNav {
+        display: block;
+    }
+
+    .topDivMenor2 {
+        display: flex;
+        padding: 10px 20px 100px 0px;
+    }
+
+    .carrinhoMobileDiv {
+        display: flex;
+        justify-content: space-between;
+        margin-left: 45%;
+    }
+    
+    .carrinhoAberto{
+        left: -250px;
+    }
+
+    #carrinhoDesktopDiv {
+        display: none;
+    }
+
+    .paginaLogo{
+        width: 100px;
+    }
+    header{
+        width: 65%;
+    }
+
+    .thumbNailsDiv{
+        display: none;
+    }
+    .setasImagens {
+        height: 50px;
+        margin:0;
+        width: 75%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .setasImagens img {
+        display: inline-block;
+        height: 50px;
+        padding: 200px 0 100px 0;
+    }
+      
 }
+
 
 @media (max-width: 480px) {
 
@@ -352,8 +481,8 @@ main {
     }
 
     main {
-        width: 600px;
-        display: block;
+        width: 400px;
+        display: inline-block;
     }
 
     #containerImg {
